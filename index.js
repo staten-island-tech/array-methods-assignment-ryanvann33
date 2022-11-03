@@ -4,13 +4,13 @@ const arr = [
     type: "DPS",
     weapon: "Shuriken",
     ultimate: "Dragonblade",
-    numbers: [1, 2, 3, 4],
+    numbers: [1, 22, 3, 4],
   },
 
   {
     name: "Soldier76",
     type: "DPS",
-    weapon: "Heavy",
+    weapon: "Heavy Pulse Rifle",
     ultimate: "Tactical Visor",
     numbers: [5, 6, 7, 8],
   },
@@ -23,9 +23,14 @@ const arr = [
     ultimate: "Gravitic Flux",
   },
 ];
-console.log(arr[0]);
-console.log(arr[1]);
-console.log(arr[2]);
-console.log(arr[2]);
 
-arr.forEach((arr) => console.log(arr.numbers));
+arr.forEach((obj) => {
+  console.log(obj.name);
+  console.log(obj.type);
+  console.log(obj.weapon);
+  console.log(obj.ultimate);
+  obj.numbers.forEach((num) => {
+    console.log(num);
+  });
+});
+const result = arr.filter((obj) => obj.type === "DPS");
